@@ -1,0 +1,51 @@
+<head>
+    <title>Principal</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+</head>
+<body>
+
+    <div class="menu">
+
+        <div class="esquerdo">
+            <h2>Sony</h2>
+        </div>
+
+        <div class="direito">
+            <a class="menu" href="contato.html">Contato</a>
+            <a class="menu" href="funcionario.html">Funcionário</a>
+            <a class="menu" href="promocoes.html">Principal</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+
+        <h1>Cadastro Funcionário</h1>
+
+        <div class="formulario">
+            <form action="">
+
+                <input type="hidden" id="id"><br/>
+                <label>Nome: </label>
+                <input type="text" id="nome" placeholder="Nome" size="50"><br/>
+                <label>Telefone: </label>
+                <input type="text" id="telefone" placeholder="(99) 1234-12345"><br/>
+                <label>Logradouro e Número: </label>
+                <input type="text" id="endereco" placeholder="Logradouro e Número" size="50"><br/>
+                <label>Salário: </label>
+                <input type="text" id="salario" placeholder="R$ 0,00" size="5"><br/>
+                <label>Estado Civil: </label>
+                <input type="text" id="estadoCivil" placeholder="Estado Civil"><br/>
+                <label>Idade: </label>
+                <input type="text" id="idade" placeholder="Idade" size="2"><br/>
+                <label>CEP: </label>
+                <input type="text" id="cep" placeholder="CEP"><br/>
+                <input type="hidden" id="imposto" placeholder="Imposto de renda"><br/>
+                <input type="button" id="nome" value="Enviar" onclick="armazenaDados()">
+                <a href="" onclick="imprimi()">Imprimir</a>
+            </form>
+            <div id="divCep"></div>
+        </div>
+    </div>
+</body>
+<script src="JavaScript/myScript.js"></script>
+</html>
