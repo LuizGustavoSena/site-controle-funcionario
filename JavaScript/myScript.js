@@ -28,6 +28,7 @@ function armazenaDados(){
                 alert("Necessário enviar a documentação da sua esposa(o)");
             }
             var funcionario = {
+                id: 1,
                 nome: nome,
                 telefone: telefone,
                 endereco: endereco,
@@ -36,15 +37,41 @@ function armazenaDados(){
                 idade: idade,
                 imposto: imposto
             };
-            findCEP();
+            
             alert("Funcionário Cadastrado");
+            //console.log(funcionario)
+            funcionarios.push(funcionario)
+            console.clear();
+            funcionarios.forEach(i => {
+                console.log(i)
+            });
         }
         
     }else{
         alert("Necessário ser maior de 18 anos");
     }
 }
+function lista(){
+    funcionarios.forEach(i => {
+        var div = createElement("div");
+        div.setAttribute("id", "item");
+        div.setAttribute("class", "item");
+        document.getElementById("navbar").appendChild(div);
 
+        var p = createElement("p");
+        p.setAttribute("id", "funcId");
+        document.getElementById("item").appendChild(p);
+        
+        Document.getElementById("funcId").innerHTML = i.id;
+        /*Document.getElementById("func").innerHTML = i.nome;
+        Document.getElementById("func").innerHTML = i.telefone;
+        Document.getElementById("func").innerHTML = i.endereco;
+        Document.getElementById("func").innerHTML = i.salario;
+        Document.getElementById("func").innerHTML = i.estadoCivil;
+        Document.getElementById("func").innerHTML = i.idade;
+        Document.getElementById("func").innerHTML = i.imposto;*/
+    });
+}
 function findCEP(){
     var cep = document.getElementById("cep").value;
     const url = 'https://viacep.com.br/ws/' + cep + '/json/';

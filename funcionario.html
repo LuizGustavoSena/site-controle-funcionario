@@ -12,6 +12,7 @@
 
         <div class="direito">
             <a class="menu" href="contato.html">Contato</a>
+            <a class="menu" href="lista.html">Lista</a>
             <a class="menu" href="funcionario.html">Funcionário</a>
             <a class="menu" href="promocoes.html">Principal</a>
         </div>
@@ -38,12 +39,14 @@
                 <label>Idade: </label>
                 <input type="text" id="idade" placeholder="Idade" size="2"><br/>
                 <label>CEP: </label>
-                <input type="text" id="cep" placeholder="CEP"><br/>
+                <input type="text" id="cep" placeholder="CEP" onblur="findCEP()"><br/>
                 <input type="hidden" id="imposto" placeholder="Imposto de renda"><br/>
                 <input type="button" id="nome" value="Enviar" onclick="armazenaDados()">
                 <a href="" onclick="imprimi()">Imprimir</a>
             </form>
-            <div id="divCep"></div>
+            <div id="divCep">
+                
+            </div>
         </div>
     </div>
 </body>
